@@ -1,0 +1,40 @@
+---
+title: "Test Blog Post"
+author: "Simon J. Kiss"
+date: "2023-02-01"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+#Use this chunk to set the working directory to 
+# go up one, then to External_data, then Submodule
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir="../External_data/Submodule")
+```
+
+
+```{r}
+#Check which files are in the directory now
+list.files()
+```
+
+```{r}
+#Confirm with getwd()
+getwd()
+```
+
+```{r}
+#Now run the import script in R_Scripts
+source("R_Scripts/1_import_data.R")
+
+```
+
+
+```{r}
+#confirm that dat is available
+library(tidyverse)
+glimpse(dat)
+```
+
+
